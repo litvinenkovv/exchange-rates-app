@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# exchange-rates-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+To build an application in the terminal, select the folder with the application and enter the command
+### `npm install`
 
 ## Available Scripts
-
 In the project directory, you can run:
-
+to run app in developers mode
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+to build an app
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+__How to use__
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It is a web application that allows you to convert currencies in real time, available on the fixer.io website.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The implementation is very simple. You choose the currency you want to convert from and the currency you want to convert to.
 
-### `npm run eject`
+The amount can be entered either manually or by using the buttons in the box. Once the amount is entered, it is immediately converted and displayed on the form.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can also freely change currencies and the amounts will be calculated automatically. Access to the site's API requires an access code, which can be entered in the field that appears when the user clicks on the "Settings" button. If the API code is incorrect, the data will not be downloaded and the user will receive a message to that effect.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The API key you enter is saved to local memory and will be read and used to access data from the site the next time the window is refreshed or the application is opened.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the application, I reuse components to display the amount and currency input fields, as well as to display errors.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I should also note that in the example above the currency name is full, but I have a short one because the free licence terms on the fixer.io website don't allow this. 
+If this file could be downloaded, then at the start of the application I would load the names into the drop down list, as I do from the main file of exchange rates.
